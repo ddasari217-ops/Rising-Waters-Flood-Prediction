@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flood Prediction</title>
+    </head>
+    <body>
+        <h1>Flood Prediction System</h1>
+        <form action="/predict" method="POST">
+            <label>Temperature:</label><br>
+            <input type="number"
+            name="temp"><br>
+            <label>Humidity:</label><br>
+            <input type="number"
+            name="humidity"><br>
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction %}
+        <h2>{{prediction}}</h2>
+        {% endif %}
+    </body>
+</html>
